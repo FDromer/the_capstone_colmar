@@ -1,0 +1,63 @@
+* {
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+  list-style: none;
+  box-sizing: border-box;
+}
+
+/* Header */ 
+.nav-header {
+  height: 64px;
+  background-color: white;
+}
+
+.header-container {
+  margin: 0 24px;
+  width: 100%;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  height: 32px;
+  float: left;
+}
+
+.navbar-desktop {
+  display: flex;
+  float: right;
+}
+
+.nav-mobile {
+  display: none;
+}
+
+.navbar-desktop li {
+  display: inline-flex;
+  margin: 0 8px;
+  align-items: center;
+}
+
+.navbar-desktop li a {
+  color: black;
+}
+
+
+/* section */
+/* section 1 */
+.everyday-section {
+  background-color: grey;
+}
+
+.everyday-content {
+  display: flex;
+  align-items: center;
+  margin: 0;
+}
+
+.everyday-banner img {
+  width: 60%;
+  height: auto;
+  margin: 32px 24px;
+}
