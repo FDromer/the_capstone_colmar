@@ -50,14 +50,43 @@
   background-color: grey;
 }
 
-.everyday-content {
+/*.everyday-content {
   display: flex;
-  align-items: center;
-  margin: 0;
-}
+  
+}*/
 
 .everyday-banner img {
   width: 60%;
   height: auto;
-  margin: 32px 24px;
+  /*margin: 32px 24px;*/
+}
+
+/* section 2 */
+/*.everyday-banner {}*/
+
+.practicing-boxes {
+  display: flex;
+}
+
+.practicing-left {
+  display: block;
+}
+
+.practicing-left-image img {
+  width: 60%;
+  height: auto;
+}
+
+.practicing-date {
+  display: flex;
+  align-items: center;
+}
+
+
+.practicing-desktop {
+  /*display: flex;*/
+}
+
+.practicing-mobile {
+  display: none;
 }
