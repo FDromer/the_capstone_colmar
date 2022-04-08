@@ -77,15 +77,15 @@
   height: auto;
 }
 
-.practicing-date {
+.practicing-item {
   display: flex;
   align-items: center;
 }
 
 
-.practicing-desktop {
-  /*display: flex;*/
-}
+/*.practicing-desktop {
+   display: flex;
+}*/
 
 .practicing-mobile {
   display: none;
