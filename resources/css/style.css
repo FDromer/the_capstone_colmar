@@ -1,92 +1,339 @@
 * {
-  padding: 0;
   margin: 0;
+  padding: 0;
   text-decoration: none;
   list-style: none;
   box-sizing: border-box;
 }
 
-/* Header */ 
+/* Make the all content relative to the header */
+
+main {
+  position: relative;
+  width: 100%;
+  top: 64px;
+}
+
+/* Colmar Header styling and specification */
+
 .nav-header {
   height: 64px;
   background-color: white;
+  border-bottom: 1px solid #f5f5f5;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  z-index: 1;
 }
 
 .header-container {
-  margin: 0 24px;
-  width: 100%;
+  margin: 16px 24px;
+  display: flex;
+  justify-content: space-between;
 }
 
 .logo {
   display: flex;
   align-items: center;
+}
+
+.logo-nav p {
   height: 32px;
-  float: left;
 }
 
-.navbar-desktop {
+.grey {
+  color: grey;
+}
+
+.texto-colmar {
   display: flex;
-  float: right;
-}
-
-.nav-mobile {
-  display: none;
 }
 
 .navbar-desktop li {
   display: inline-flex;
-  margin: 0 8px;
-  align-items: center;
+  margin-left: 16px;
+  margin-top: 8px;
 }
 
 .navbar-desktop li a {
-  color: black;
+  color: gray;
 }
 
+.navbar-mobile {
+  display: none;
+}
 
-/* section */
-/* section 1 */
+/* Everyday Colmar styling */
+
 .everyday-section {
-  background-color: grey;
+  background-color: #D9DAD8;
 }
 
-/*.everyday-content {
-  display: flex;
-  
-}*/
-
-.everyday-banner img {
-  width: 60%;
-  height: auto;
-  /*margin: 32px 24px;*/
-}
-
-/* section 2 */
-/*.everyday-banner {}*/
-
-.practicing-boxes {
-  display: flex;
-}
-
-.practicing-left {
-  display: block;
-}
-
-.practicing-left-image img {
-  width: 60%;
-  height: auto;
-}
-
-.practicing-item {
+.everyday-content {
   display: flex;
   align-items: center;
 }
 
+.everyday-image {
+  padding: 32px 24px;
+  width: 60%;
+  height: auto;
+}
 
-/*.practicing-desktop {
-   display: flex;
-}*/
+.everyday-box {
+  width: 40%;
+  margin-left: 24px;
+}
 
-.practicing-mobile {
+.everyday-title {
+  display: flex;
+  flex-direction: column;
+  margin-left: 30px;
+}
+
+.everyday-title h1 {
+  margin-right: 60px;
+  margin-bottom: 24px;
+  font-size: 50px;
+  margin-left: 16px;
+}
+
+.everyday-title p {
+  font-size: 30px;
+  margin-bottom: 24px;
+}
+
+.everyday-btn {
+  font-size: 25px;
+  font-weight: normal;
+  background: #464646;
+  width: 250px;
+  text-align: center;
+  text-decoration: none;
+  color: #fff;
+  cursor: pointer;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  margin-left: 16px;
+}
+
+/* Practicing Colmar Styling */
+
+.practicing-section {
+  background-color: #f5f5f5;
+}
+
+.practicing-content {
+  display: flex;
+}
+
+.practicing-content-left {
+  display: flex;
+  flex-direction: column;
+  flex-basis: 60%;
+}
+
+.practicing-image {
+  height: auto;
+  width: 100%;
+  overflow: hidden;
+  padding: 32px 24px;
+}
+
+.practicing-text h2 {
+  margin-bottom: 24px;
+  margin-left: 24px;
+}
+
+.practicing-text p {
+  margin-left: 24px;
+  padding-bottom: 32px;
+}
+
+.practicing-text h6 {
+  margin-left: 24px;
+
+}
+
+.practicing-content-right {
+  padding-top: 16px;
+  margin-bottom: 32px;
+  display: flex;
+  flex-direction: column;
+  flex-basis: 40%;
+}
+
+.practicing-content-desktop {
+  display: flex;
+  flex-direction: column;
+}
+
+.practicing-item-d {
+  display: flex;
+  align-items: center;
+}
+
+.item-image-d {
+  width: 35%;
+  height: auto;
+  margin: 16px 16px;
+}
+
+.text-image-d h2 {
+  flex-basis: 65%;
+  margin-bottom: 8px;
+}
+
+.text-image-d p {
+  margin-bottom: 8px;
+}
+
+.text-image-d span {
+  color: #1e2f97;
+}
+
+.x-color {
+  background-color: #464646;
+}
+
+.practicing-content-mobile {
   display: none;
+}
+
+/* learning section styling */
+
+.learning-section {
+  background-color: #D9DAD8;
+}
+
+.learning-title {
+  text-align: center;
+  padding-top: 32px;
+  padding-bottom: 32px;
+}
+
+.learning-content {
+  margin-left: 72px;
+  margin-right: 72px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+
+.learning-image {
+  height: auto;
+}
+
+.learning-option {
+  background-color: #fff;
+  margin-bottom: 32px;
+  margin-right: 16px;
+  margin-left: 16px;
+}
+
+.learning-text, 
+.learning-image {
+  width: 355.16px;
+   /* 355.16px can be convert in 
+  viewport view which will equal 26vw;*/
+} 
+
+.learning-text h3, h4, p {
+  margin-left: 16px;
+  margin-right: 16px;
+}
+
+.learning-text h3 {
+  margin-top: 16px;
+  margin-bottom: 8px;
+}
+
+.learning-text p {
+  margin-bottom: 24px;
+}
+
+.learning-text h4 {
+  margin-bottom: 8px;
+} 
+
+/* Colmar Thesis styling */
+
+#thesis-section {
+  background-color: #f5f5f5;
+}
+
+.thesis-title {
+  text-align: center;
+  padding-top: 32px;
+  padding-bottom: 32px;
+}
+
+.thesis-content {
+  display: flex;
+}
+
+.thesis-sample {
+  flex-basis: 60%;
+}
+
+.thesis-video video {
+  width: 100%;
+  padding-left: 24px;
+  padding-right: 24px;
+  padding-bottom: 24px;
+}
+
+.thesis-text {
+  padding-top: 24px;
+  padding-left: 24px;
+}
+
+.thesis-text h2 {
+  padding-bottom: 8px;
+}
+
+.thesis-text p {
+  margin-bottom: 32px;
+}
+
+.thesis-ex {
+  display: flex;
+  flex-direction: column;
+}
+
+.thesis-item {
+  display: flex;
+  align-items: center;
+  flex: 1;
+  
+}
+
+.thesis-image {
+  flex-basis: 35%;
+  padding: 16px 16px;
+}
+
+.tcol {
+  background-color: #464646;
+}
+
+/* Colmar Footer styling */
+
+.nav-footer {
+  display: flex;
+  justify-content: space-between;
+  border-top: 1px solid grey;
+  background-color: #fff;
+  padding-bottom: 48px;
+}
+
+.copyright {
+  margin-top: 16px;
+  margin-left: 24px;
+}
+
+.terms {
+  margin-top: 16px;
+  margin-right: 24px;
 }
