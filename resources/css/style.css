@@ -1,9 +1,15 @@
+/*
+*/
 * {
   margin: 0;
   padding: 0;
   text-decoration: none;
   list-style: none;
   box-sizing: border-box;
+}
+
+body {
+  font-size: 16px;
 }
 
 /* Make the all content relative to the header */
@@ -16,51 +22,99 @@ main {
 
 /* Colmar Header styling and specification */
 
-.nav-header {
+.head {
   height: 64px;
-  background-color: white;
   border-bottom: 1px solid #f5f5f5;
+  background-color: #fff;
   width: 100%;
   position: fixed;
   top: 0;
   z-index: 1;
+  opacity: 0.8;
 }
 
-.header-container {
-  margin: 16px 24px;
+.head-content {
+  display: flex;
+  justify-content: space-between;
+  margin-left: 24px;
+  margin-right: 24px;
+  margin-top: 20px;
+}
+
+.head-logo  {
+  display: inline-flex;
+  flex-direction: row;
+  align-items: center;
+  row-gap: 0px;
+}
+
+.head-item {
   display: flex;
   justify-content: space-between;
 }
 
-.logo {
+.desktop-logo {
   display: flex;
-  align-items: center;
-}
-
-.logo-nav p {
   height: 32px;
+  width: 32px;
 }
 
-.grey {
-  color: grey;
+.cologo {
+  color: #464646;
+  font-weight: 700;
 }
 
-.texto-colmar {
-  display: flex;
+.strong {
+  font-weight: 700;
+  color: black;
 }
 
-.navbar-desktop li {
+.head-desktop li {
   display: inline-flex;
-  margin-left: 16px;
-  margin-top: 8px;
+  padding-left: 16px;
 }
 
-.navbar-desktop li a {
-  color: gray;
+.head-desktop li a {
+  color: #464646;
 }
 
-.navbar-mobile {
+.head-mobile {
   display: none;
+}
+
+/* Media queries Header  Clomar */
+
+@media only screen and (max-width: 768px) {
+  .head-desktop {
+    display: none;
+  }
+
+  .head-logo {
+    display: none;
+  }
+
+  .head-mobile {
+    display: flex;
+    /*flex-direction: row;*/
+    /*align-items: center;*/
+    /*justify-content: center;
+    /*align-items: center;*/
+  }
+  
+  .head-mobile ul {
+    display: flex;
+    /*flex-direction: row;*/
+    /*justify-content: center;
+    /*align-items: center;*/
+  }
+
+  .mobile-logo {
+    height: 30px;
+  }
+
+  .head-mobile ul li {
+    padding: 0 1rem;
+  }
 }
 
 /* Everyday Colmar styling */
@@ -72,17 +126,12 @@ main {
 .everyday-content {
   display: flex;
   align-items: center;
+  padding: 32px 24px;
 }
 
 .everyday-image {
-  padding: 32px 24px;
   width: 60%;
   height: auto;
-}
-
-.everyday-box {
-  width: 40%;
-  margin-left: 24px;
 }
 
 .everyday-title {
@@ -116,6 +165,44 @@ main {
   padding-bottom: 8px;
   margin-left: 16px;
 }
+
+/* Media queries Everyday Colmar */
+
+@media only screen and (max-width: 768px) {
+
+  .everyday-content {
+    flex-direction: column;
+    padding: 0;
+    height: 110vw;
+  }
+
+  .everyday-image {
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+  }
+
+  .everyday-title {
+    padding-top: 32px;
+  }
+  
+  .everyday-title h1 {
+    font-size: 32px;
+    /*margin-left: 16px;*/
+  }
+  
+  .everyday-title p {
+    font-size: 22px;
+    /*margin-left: 16px;*/
+  }
+
+  .everyday-btn {
+    margin-bottom: 32px;
+  }
+
+}
+
+
 
 /* Practicing Colmar Styling */
 
@@ -182,6 +269,7 @@ main {
 .text-image-d h2 {
   flex-basis: 65%;
   margin-bottom: 8px;
+  padding-left: 16px;
 }
 
 .text-image-d p {
@@ -198,6 +286,60 @@ main {
 
 .practicing-content-mobile {
   display: none;
+}
+
+/* Media queries Practicing Colmar*/
+
+@media only screen and (max-width: 768px) {
+  
+  .practicing-content-left {
+    display: none;
+  }
+
+  .practicing-content-desktop {
+    display: none;
+    border-bottom: 1px solid #464646;
+  }
+
+  .practicing-content-right {
+    padding: 0;
+    margin: 0;
+  }
+
+  .practicing-content-mobile {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .practicing-item-m {
+   
+    display: flex;
+    flex-direction: column;
+    /*align-items: center;
+    /*text-align: center;*/
+  }
+
+  .text-image-m {
+    /*padding: 16px 16px;*/
+    width: 100%;
+    /*height: 25vw;*/
+  }
+
+  .text-image-m h2 {
+    margin-left: 16px;
+    /*margin-left: 48px;*/
+    font-size: 15px;
+    /*margin-bottom: 8px;*/
+    margin-top: 32px;
+  }
+
+  .item-image-m img {
+    padding-top: 16px;
+    padding-left: 16px;
+    /*display: block;*/
+    width: 200%;
+    /*margin-left: 32px;*/
+  }
 }
 
 /* learning section styling */
@@ -239,7 +381,7 @@ main {
   viewport view which will equal 26vw;*/
 } 
 
-.learning-text h3, h4, p {
+.learning-text h3, p {
   margin-left: 16px;
   margin-right: 16px;
 }
@@ -250,12 +392,47 @@ main {
 }
 
 .learning-text p {
-  margin-bottom: 24px;
+  margin-bottom: 18px;
+  margin-top: 18px;
 }
 
-.learning-text h4 {
-  margin-bottom: 8px;
-} 
+/* Media queries Learning Colmar */
+@media only screen and (max-width: 768px) {
+  .learning-section {
+    background-color: #f5f5f5;
+  }
+
+  .learning-image {
+    display: none;
+  }
+
+  .learning-content {
+    padding: 0;
+    /*flex-direction: column;*/
+  }
+
+  .learning-option {
+    margin: 0.5rem 1rem;
+    background-color: #D9DAD8;
+
+  }
+
+  .learning-text > p:nth-child(2) {
+    display: none;
+  }
+
+  /*.learning-text {
+    padding: 1.5rem;
+  }*/
+
+  .learning-text > p:last-child {
+    display: none;
+  }
+
+  .learning-text h3 {
+    padding: 16px 24px 16px 0px;
+  }
+}
 
 /* Colmar Thesis styling */
 
@@ -275,13 +452,13 @@ main {
 
 .thesis-sample {
   flex-basis: 60%;
+  padding-left: 24px;
+  padding-right: 24px;
+  padding-bottom: 24px;
 }
 
 .thesis-video video {
   width: 100%;
-  padding-left: 24px;
-  padding-right: 24px;
-  padding-bottom: 24px;
 }
 
 .thesis-text {
@@ -318,6 +495,21 @@ main {
   background-color: #464646;
 }
 
+/* Media queries Thesis Colmar*/
+
+@media only screen and (max-width: 768px) {
+  .thesis-ex,
+  .thesis-text {
+    display: none;
+  }
+
+  .thesis-video video {}
+
+  .thesis-content .thesis-title {
+    padding: 1rem;
+  }
+}
+
 /* Colmar Footer styling */
 
 .nav-footer {
@@ -336,4 +528,16 @@ main {
 .terms {
   margin-top: 16px;
   margin-right: 24px;
+}
+
+/* Media queries Footer Colmar */
+
+@media only screen and (max-width: 768px) {
+  .terms {
+    display: none;
+  }
+
+  .copyright {
+    padding-top: 40px;
+  }
 }
